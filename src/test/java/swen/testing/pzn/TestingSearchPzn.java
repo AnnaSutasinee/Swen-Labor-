@@ -21,7 +21,6 @@ public class TestingSearchPzn {
 	public void setup() {
 		search = new SearchPzn();
 		MockitoAnnotations.initMocks(this);
-		
 	}
 	 
 	@Test
