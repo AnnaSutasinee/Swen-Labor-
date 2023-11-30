@@ -20,8 +20,9 @@ public class TestPatientenVerwaltung {
 
     @Before
     public void setUp() {
-        MockitoAnnotations.initMocks(this);
-        verwaltung = new PatientenVerwaltung(mockDatenbank);
+        verwaltung = new PatientenVerwaltung();
+//        MockitoAnnotations.initMocks(this); // deprecated in Mockito
+        MockitoAnnotations.openMocks(this);
     }
 
     @Test
@@ -30,7 +31,7 @@ public class TestPatientenVerwaltung {
         when(mockDatenbank.save(patient)).thenReturn(true);
 
         assertTrue(verwaltung.addPatient(patient));
-        verify(mockDatenbank).save(patient);
+        verify(mockDatenbank, times(1)).save(patient);
     }
 
     @Test(expected = IllegalArgumentException.class)

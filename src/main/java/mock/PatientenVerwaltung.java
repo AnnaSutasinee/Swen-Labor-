@@ -8,6 +8,11 @@ public class PatientenVerwaltung {
         this.datenbank = datenbank;
     }
 
+    public PatientenVerwaltung() {
+        // während der Entwicklung der Datenbankschnittstelle gibt es lediglich das Interface!
+        this(null);
+    }
+
     public boolean addPatient(Patient patient) {
         // Implementierung zum Hinzufügung eines Patienten
         if (patient == null)
