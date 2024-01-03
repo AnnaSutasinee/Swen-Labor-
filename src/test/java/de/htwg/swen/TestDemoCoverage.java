@@ -15,5 +15,5 @@ public class TestDemoCoverage {
 		//assertEquals(-1, addieren(1,-2));
 	}
 
-	@Test
+
 }

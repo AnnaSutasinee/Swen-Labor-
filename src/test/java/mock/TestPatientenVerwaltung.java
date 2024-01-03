@@ -36,6 +36,8 @@ public class TestPatientenVerwaltung {
 
     @Test(expected = IllegalArgumentException.class)
     public void testAddEmptyPatient() {
+
+
         assertTrue(verwaltung.addPatient(null));
     }
 
